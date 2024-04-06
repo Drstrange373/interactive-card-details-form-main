@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Linear gradient (active input border) */
+    --active-input-border-gradient-start: hsl(249, 99%, 64%);
+    --active-input-border-gradient-end: hsl(278, 94%, 30%);
+    
+    /* Red (input errors) */
+    --input-error: hsl(0, 100%, 66%);
+    
+    /* Neutral colors */
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    background-size: 40.33vw 100vh;
+}
+
+.container{
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-width: 547px;
+    width: 40%;
+    scale: 0.8;
+    padding-left: 10%;
+    align-items: flex-end;
+}
+
+.card-front, .card-back{
+    height: 245px;
+    width: 447px;
+    border-radius: 10px;
+    box-shadow: black 0px 5px 10px;
+    position: relative;
+}
+
+.card-front{
+    background-image: url('images/bg-card-front.png');
+    margin-bottom: 20px;
+    right: 80px;
+}
+
+.card-back{
+    background-image: url('images/bg-card-back.png');
+}
+
+#card-logo, #card-number, #card-username, #card-expiry ,#cvv{
+    position: absolute;
+    color: var(--light-grayish-violet);
+}
+
+#card-logo{
+    left: 7%;
+    top: 8%;
+}
+
+#card-number{
+    top: 55%;
+    left: 07%;
+    font-size: x-large;
+    letter-spacing: 3px;
+}
+
+#cvv{
+    top: 44%;
+    left: 80%;
+}
+
+#card-username{
+    top: 80%;
+    left: 7%;
+}
+
+#card-expiry{
+    top: 80%;
+    left: 80%;
+}
+
+.form-container, .thankyou{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    scale: 0.8;
+}
+
+.thankyou{
+    align-items: center;
+    color: var(--very-dark-violet);
+}
+
+.thankyou > *{
+    margin-bottom: 20px;
+}
+
+#thankyou-text{
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.form-container>*{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+input{
+    border-radius: 5px;
+    border: 1px solid var(--light-grayish-violet);
+    height: 45px;
+    width: 30vw;
+    padding-left: 10px;
+}
+
+input:not(.exp-date-field input){
+    min-width: 381px;
+}
+
+input:focus{
+    border:2px solid var(--active-input-border-gradient-start);
+    outline: none;
+}
+
+label{
+    margin-bottom: 10px;
+}
+
+.exp-date-field input{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.submit-btn button, #ctn-btn{
+    height: 53px;
+    width: 381px;
+    border-radius:5px ;
+    background-color: var(--very-dark-violet);
+    color: var(--light-grayish-violet);
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+.submit-btn button:hover, #ctn-btn:hover{
+    opacity: 0.8;
+}
+
+.warning{
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--input-error);
+    margin-top: 10px;
+    display: none;
+}
+
+.warning-active{
+    display: inline-block !important;
+}
+
+#complite-img{
+    width: 80px;
+    height: 80px;
+}
+
+@media (max-width:900px) {
+    body{
+        background-image: url('images/bg-main-mobile.png');
+        background-size: 100vw 250px;
+        align-items: baseline;
+        overflow-x: scroll;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .cards-container{
+        flex-direction: column;
+        scale: 0.7;
+    }
+
+
+    .card-front {
+        top: 54px;
+        left: -77px;
+        z-index: 2;
+    }
+
+    .card-back {
+        top: -353px;
+        left: -22px;
+    }
+
+    .form-container, .thankyou{
+        position: absolute;
+        top: 40vh;
+    }
+}
+
+

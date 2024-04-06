@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <script src="script.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+
+
+  <section class="container">
+
+
+    <aside class="cards-container">
+      <div class="card-front">
+        <img src="images/card-logo.svg" id="card-logo" alt="logo">
+        <div id="card-number">0000 0000 0000 0000</div>
+        <div id="card-username">Jane Appleseed</div>
+        <div id="card-expiry"><span>00</span>/<span>00</span></div>
+      </div>
+
+      <div class="card-back">
+        <div id="cvv">000</div>
+      </div>
+    </aside>
+
+
+
+      <form class="form-container" 
+      
+      >
+        <div class="user-name-field">
+          <label>Cardholder Name</label>
+          <input id="uname" type="text" minlength="4" maxlength="28" placeholder="e.g. Jane Appleseed">
+          <span class="warning ">Name must not contain numbers or special characters </span>
+        </div>
+
+        <div class="card-number-field">
+          <label>Card Number</label>
+          <input id="ucardnumber" type="text" placeholder="e.g. 1234 5678 9123 0000">
+          <span class="warning">Wrong format, only numbers</span>
+          <span class="warning">Number must be of 16 digits</span>
+        </div>
+
+        <div class="exp-date-field">
+          <label>Exp. Date (MM/YY)</label>
+          <div>
+            <input id="uexpirymonth" type="text" placeholder="MM">
+            <input id="uexpiryyear" type="text" placeholder="DD"> <br>
+            <div class="warning">Cant be blank</div>
+          </div>
+        </div>
+
+        <div class="cvc-field">
+          <label >CVC</label>
+          <input id="ucvv" type="text" placeholder=" e.g. 123">
+          <span class="warning ">Cant be blank</span>
+        </div>
+
+        <div class="submit-btn">
+          <button  type="submit">Confirm</button>
+        </div>
+        
+      </form>
+      <div class="thankyou" style="display: none;">
+
+        <img id="complite-img" src="images/icon-complete.svg" alt="complete">
+
+        <!-- Completed state start -->
+        
+        <span id="thankyou-text">Thank you!</span>
+        <span>We've added your card details</span>
+        
+
+        <button id="ctn-btn">Continue</button>
+        
+      </div>
+      </main>
+  </section>
+
+</body>
+
+</html>
