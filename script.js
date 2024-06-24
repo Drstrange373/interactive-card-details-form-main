@@ -14,7 +14,7 @@ const form = document.getElementsByClassName('form-container')[0]
 const thankyouSection = document.getElementsByClassName('thankyou')[0]
 
 
-
+console.log("new build deployed")
 
 
 // event listeners
