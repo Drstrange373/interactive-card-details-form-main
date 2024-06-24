@@ -14,6 +14,8 @@ const form = document.getElementsByClassName('form-container')[0]
 const thankyouSection = document.getElementsByClassName('thankyou')[0]
 
 
+alert("new build")
+
 console.log("new build deployed")
 
 
